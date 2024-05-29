@@ -1,0 +1,20 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclaje UR</title>
+</head>
+<body>
+    <h1>Información sobre Reciclaje</h1>
+    <ul>
+        {% for producto in productos %}
+        <li>
+            <strong>{{ producto.nombre }}</strong> ({{ producto.tipo }}): {{ producto.instrucciones_reciclaje }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
